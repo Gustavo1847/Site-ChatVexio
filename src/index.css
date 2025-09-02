@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chatvexio Design System - Light Mode */
+
+@layer base {
+  :root {
+    /* Base colors - Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 220 26% 14%;
+    
+    /* Chatvexio Brand Colors */
+    --chatvexio-orange: 24 95% 53%;
+    --chatvexio-orange-hover: 24 95% 48%;
+    --chatvexio-orange-light: 24 95% 97%;
+    
+    /* Text Colors */
+    --text-primary: 220 26% 14%;
+    --text-secondary: 220 9% 46%;
+    --text-muted: 220 9% 64%;
+    
+    /* UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
+    --card-shadow: 220 26% 14% / 0.05;
+    
+    --border: 220 13% 91%;
+    --border-light: 220 13% 95%;
+    --input: 220 13% 91%;
+    --ring: 24 95% 53%;
+    
+    /* Interactive States */
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 24 95% 48%;
+    
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 24 95% 53%;
+    --secondary-hover: 24 95% 97%;
+    
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 9% 46%;
+    
+    --accent: 24 95% 97%;
+    --accent-foreground: 24 95% 53%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--chatvexio-orange)), hsl(var(--chatvexio-orange-hover)));
+    --gradient-light: linear-gradient(135deg, hsl(var(--chatvexio-orange-light)), hsl(var(--background)));
+    --shadow-primary: 0 4px 20px hsl(var(--chatvexio-orange) / 0.15);
+
+    --radius: 0.5rem;
+
+    /* Sidebar (not used but keeping for compatibility) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Custom Chatvexio Button Variants */
+  .btn-chatvexio-primary {
+    @apply bg-primary text-primary-foreground font-medium px-6 py-3 rounded-lg 
+           hover:bg-[hsl(var(--primary-hover))] transition-all duration-200 
+           shadow-sm hover:shadow-md transform hover:-translate-y-0.5;
+  }
+  
+  .btn-chatvexio-secondary {
+    @apply bg-secondary text-secondary-foreground font-medium px-6 py-3 rounded-lg 
+           border border-primary hover:bg-[hsl(var(--secondary-hover))] 
+           transition-all duration-200 shadow-sm hover:shadow-md 
+           transform hover:-translate-y-0.5;
+  }
+  
+  /* Custom Card Styles */
+  .card-chatvexio {
+    @apply bg-card rounded-lg p-6 shadow-[0_2px_10px_hsl(var(--card-shadow))] 
+           hover:shadow-[0_4px_20px_hsl(var(--card-shadow))] 
+           transition-all duration-300 border border-border;
+  }
+  
+  .card-chatvexio-featured {
+    @apply card-chatvexio border-primary;
+  }
+  
+  /* Typography */
+  .text-chatvexio-primary {
+    @apply text-[hsl(var(--text-primary))];
+  }
+  
+  .text-chatvexio-secondary {
+    @apply text-[hsl(var(--text-secondary))];
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
