@@ -1,6 +1,6 @@
 import { ChatvexioButton } from "@/components/ui/chatvexio-button"
 
-export const FinalCTASection = () => {
+const FinalCTASection = () => {
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-chatvexio-orange-light to-white">
       <div className="container mx-auto max-w-5xl text-center">
@@ -23,3 +23,4 @@ export const FinalCTASection = () => {
     </section>
   )
 }
+export default FinalCTASection;

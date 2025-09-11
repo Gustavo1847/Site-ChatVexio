@@ -161,6 +161,6 @@
   }
   
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 4500ms ease-in-out infinite;
   }
 }

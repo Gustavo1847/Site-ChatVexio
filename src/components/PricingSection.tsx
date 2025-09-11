@@ -54,7 +54,7 @@ const plans = [
   }
 ]
 
-export const PricingSection = () => {
+const PricingSection = () => {
   return (
     <section className="py-20 px-6 bg-gray-50/50">
       <div className="container mx-auto max-w-7xl">
@@ -128,3 +128,4 @@ export const PricingSection = () => {
     </section>
   )
 }
+export default PricingSection;

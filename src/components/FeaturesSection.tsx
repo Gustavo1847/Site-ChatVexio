@@ -26,7 +26,7 @@ const features = [
   }
 ]
 
-export const FeaturesSection = () => {
+const FeaturesSection = () => {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="container mx-auto max-w-7xl">
@@ -66,3 +66,4 @@ export const FeaturesSection = () => {
     </section>
   )
 }
+export default FeaturesSection;
