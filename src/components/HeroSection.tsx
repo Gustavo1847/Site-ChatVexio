@@ -15,7 +15,6 @@ const useGsapHeroSection = () => {
         start: "top top+=100",
         end: "top top-=150",
         scrub: true,
-        markers: true,
       },
       y: 120,
       opacity: 0,
