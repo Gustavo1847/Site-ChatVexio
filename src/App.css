@@ -1,1 +1,4 @@
-html { scroll-padding-top: 80px; }
+html { scroll-padding-top: 72px; }
+@media (min-width: 768px) {
+  html { scroll-padding-top: 96px; }
+}
