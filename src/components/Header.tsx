@@ -30,48 +30,48 @@ const Header = () => {
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('home')}
-              className="text-gray-700 font-semibold hover:text-vexio-orange transition-colors"
+              onClick={() => scrollToSection('Inicio')}
+              className="text-gray-700 font-semibold hover:text-chatvexio-orange transition-colors"
             >
               Início
             </button>
             <button 
-              onClick={() => window.open("https://chatvexio.vexiostudio.com.br", "_blank")}
-              className="text-vexio-orange font-semibold hover:text-gray-700 transition-colors"
+              onClick={() => scrollToSection('Sobre')}
+              className="text-gray-700 hover:text-chatvexio-orange transition-colors"
             >
-              ChatVexio
+              Sobre
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-vexio-orange transition-colors"
-            >
-              Serviços
-            </button>
-            <button 
-              onClick={() => scrollToSection('benefits')}
-              className="text-gray-700 hover:text-vexio-orange transition-colors"
+              onClick={() => scrollToSection('Beneficios')}
+              className="text-gray-700 hover:text-chatvexio-orange transition-colors"
             >
               Benefícios
             </button>
             <button 
-              onClick={() => scrollToSection('pricing')}
-              className="text-gray-700 hover:text-vexio-orange transition-colors"
+              onClick={() => scrollToSection('Bonus')}
+              className="text-gray-700 hover:text-chatvexio-orange transition-colors"
+            >
+              Bônus
+            </button>
+            <button 
+              onClick={() => scrollToSection('Preco')}
+              className="text-gray-700 hover:text-chatvexio-orange transition-colors"
             >
               Preços
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-vexio-orange transition-colors"
+              onClick={() => scrollToSection('FAQ')}
+              className="text-gray-700 hover:text-chatvexio-orange transition-colors"
             >
-              Contato
+              FAQ
             </button>
           </nav>
 
           <Button 
-            onClick={() => window.open('https://wa.me/5583982210377?text=Ol%C3%A1%2C%20tudo%20bom%3F%0AVim%20do%20site%2C%20e%20quero%20testar%20agora%21', '_blank')}
-            className="hidden md:inline-flex bg-vexio-orange hover:bg-vexio-orange-dark text-white"
+            onClick={() => window.open('https://chat.vexio.app.br', '_blank')}
+            className="hidden md:inline-flex bg-chatvexio-orange hover:bg-chatvexio-orange-dark text-white"
           >
-            Testar Agora
+            Login
           </Button>
 
           {/* Mobile Menu Button */}
@@ -88,40 +88,46 @@ const Header = () => {
           <nav className="md:hidden mt-4 pb-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4 pt-4">
               <button 
-                onClick={() => scrollToSection('home')}
-                className="text-left text-gray-700 hover:text-vexio-orange transition-colors"
+                onClick={() => scrollToSection('Inicio')}
+                className="text-left text-gray-700 hover:text-chatvexio-orange transition-colors"
               >
                 Início
               </button>
               <button 
-                onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-vexio-orange transition-colors"
+                onClick={() => scrollToSection('Sobre')}
+                className="text-left text-gray-700 hover:text-chatvexio-orange transition-colors"
               >
-                Serviços
+                Sobre
               </button>
               <button 
-                onClick={() => scrollToSection('benefits')}
-                className="text-left text-gray-700 hover:text-vexio-orange transition-colors"
+                onClick={() => scrollToSection('Beneficios')}
+                className="text-left text-gray-700 hover:text-chatvexio-orange transition-colors"
               >
                 Benefícios
               </button>
               <button 
-                onClick={() => scrollToSection('pricing')}
-                className="text-left text-gray-700 hover:text-vexio-orange transition-colors"
+                onClick={() => scrollToSection('Bonus')}
+                className="text-left text-gray-700 hover:text-chatvexio-orange transition-colors"
+              >
+                Bônus
+              </button>
+              <button 
+                onClick={() => scrollToSection('Preco')}
+                className="text-left text-gray-700 hover:text-chatvexio-orange transition-colors"
               >
                 Preços
               </button>
               <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 hover:text-vexio-orange transition-colors"
+                onClick={() => scrollToSection('FAQ')}
+                className="text-left text-gray-700 hover:text-chatvexio-orange transition-colors"
               >
-                Contato
+                FAQ
               </button>
               <Button 
-                onClick={() => window.open('https://wa.me/5583982210377', '_blank')}
-                className="bg-vexio-orange hover:bg-vexio-orange-dark text-white w-full"
+                onClick={() => window.open('https://chat.vexio.app.br', '_blank')}
+                className="bg-chatvexio-orange hover:bg-chatvexio-orange-dark text-white w-full"
               >
-                Testar Agora
+                Login
               </Button>
             </div>
           </nav>

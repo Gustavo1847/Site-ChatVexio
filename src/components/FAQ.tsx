@@ -17,10 +17,18 @@ const faqs = [
   {
     question: "Posso cancelar quando quiser?",
     answer: "Sim. Nossos planos são mensais e você pode cancelar a qualquer momento, sem taxas ou multas."
+  },
+  {
+    question: "Quais são as Formas de Pagamento?",
+    answer: "Você pode pagar com cartão de crédito, PIX ou boleto bancário. Aceitamos as principais bandeiras de cartão de crédito."
+  },
+  {
+    question: "O ChatVexio oferece alguma garantia de devolução do dinheiro?",
+    answer: "Estamos tão confiantes no valor que o ChatVexio trará para o seu negócio que oferecemos uma garantia de reembolso total de 30 dias. Se você não estiver completamente satisfeito, devolveremos seu dinheiro, sem perguntas."
   }
 ]
 
-const FAQSection = () => {
+const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggleFAQ = (index: number) => {
@@ -28,7 +36,7 @@ const FAQSection = () => {
   }
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white" id="FAQ">
       <div className="container mx-auto max-w-4xl">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -72,4 +80,4 @@ const FAQSection = () => {
     </section>
   )
 }
-export default FAQSection;
+export default FAQ;

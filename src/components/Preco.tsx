@@ -4,33 +4,38 @@ import { Check } from "lucide-react"
 const plans = [
   {
     name: "Start",
-    price: "R$ 197",
+    price: "R$ 47",
     period: "/mês",
-    ideal: "Equipes iniciando a operação.",
+    ideal: "Por usuário, ideal para pequenas equipes.",
+    usuarios: "Até 3 usuários",
     features: [
-      "Até 3 Usuários",
+      "Email",
+      "Automações",
       "WhatsApp API Oficial",
-      "Instagram e Facebook",
       "Chat para Site e Telegram",
-      "App para Celular (iOS/Android)",
-      "Automação Básica"
+      "App para Celular (iOS/Android)"
     ],
+    buttonLink: "",
     buttonText: "Começar com o Start",
     buttonVariant: "secondary" as const,
     featured: false
   },
   {
     name: "Business",
-    price: "R$ 397",
+    price: "R$ 97",
     period: "/mês",
-    ideal: "Empresas que buscam escalar.",
+    ideal: "Por usuário, ideal para empresas que buscam escalar.",
+    usuarios: "Até 10 usuários",
     features: [
       "Tudo do Start",
-      "Até 10 Usuários",
+      "Instagram",
+      "Facebook",
+      "Messenger",
       "Relatórios Completos",
-      "API e Webhooks para Integrações",
-      "Atendente Virtual (IA)"
+      "Integrações Externas via API",
+      "Atendente Virtual com Inteligência Artificial",
     ],
+    buttonLink: "",
     buttonText: "Quero o Plano Business",
     buttonVariant: "primary" as const,
     featured: true,
@@ -38,16 +43,17 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "Personalizado",
+    price: "Customizado",
     period: "",
-    ideal: "Grandes operações e necessidades customizadas.",
+    ideal: "Para grandes operações e necessidades customizadas.",
+    usuarios: "Usuários Ilimitados",
     features: [
       "Tudo do Business",
-      "Usuários Ilimitados",
       "Gerente de Conta Dedicado",
       "Suporte Prioritário e SLA",
       "Onboarding e Treinamento"
     ],
+    buttonLink: "",
     buttonText: "Falar com um Especialista",
     buttonVariant: "secondary" as const,
     featured: false
@@ -56,13 +62,16 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section className="py-20 px-6 bg-gray-50/50">
+    <section className="py-20 px-6 bg-gray-50/50" id="Preco">
       <div className="container mx-auto max-w-7xl">
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4">
             Planos <span className="text-chatvexio-orange">transparentes</span>, sem surpresas no final do mês.
           </h2>
+          <p className="my-6 text-lg leading-8 text-gray-600">
+            Comece agora mesmo a sua jornada rumo a um atendimento ao cliente inesquecível. Com nossa garantia de 30 dias, você tem tudo a ganhar e nada a perder.
+          </p>
         </div>
         
         {/* Pricing Cards */}
@@ -95,12 +104,19 @@ const PricingSection = () => {
                   </span>
                 </div>
                 <p className="text-text-secondary text-sm">
-                  Ideal para: {plan.ideal}
+                  {plan.ideal}
                 </p>
               </div>
-              
+
+              {/* Usuários */}
+              <div className="flex items-center space-x-4 rounded-md border p-4">
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm leading-none font-medium">{plan.usuarios}</p>
+                </div>
+              </div>
+
               {/* Features List */}
-              <div className="mb-8">
+              <div className="my-6">
                 <ul className="space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
@@ -118,6 +134,7 @@ const PricingSection = () => {
                 variant={plan.buttonVariant}
                 size="lg"
                 className="w-full"
+                onClick={() => window.location.href = plan.buttonLink} // Redirect on button click
               >
                 {plan.buttonText}
               </ChatvexioButton>
