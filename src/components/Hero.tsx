@@ -58,7 +58,7 @@ const Hero = () => {
 
         <div className="relative mt-[-80px]">
           <img
-            src="/src/assets/chatvexio-dashboard-hero-macbook.png"
+            src="/chatvexio-dashboard-hero-macbook.png"
             alt="Dashboard da ChatVexio mostrando caixa de entrada unificada com WhatsApp, Instagram e outros canais"
             className="w-full h-auto will-change-transform [transform:translateZ(0)] drop-shadow-xl"
           />
